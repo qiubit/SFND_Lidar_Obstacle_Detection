@@ -1,7 +1,9 @@
 /* \author Aaron Brown */
 // Quiz on implementing kd tree
 
-#include "../../render/render.h"
+#pragma once
+
+#include "render/render.h"
 #include <memory>
 #include <vector>
 
@@ -143,7 +145,3 @@ struct KdTree
 		}
 	}
 };
-
-
-
-
