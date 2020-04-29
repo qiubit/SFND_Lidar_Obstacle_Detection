@@ -268,7 +268,8 @@ std::vector<typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::C
             cloudCluster->height = 1;
             cloudCluster->is_dense = true;
 
-            clusters.push_back(cloudCluster);
+            if (cloudCluster->points.size() >= minSize && cloudCluster->points.size() <= maxSize)
+                clusters.push_back(cloudCluster);
         }
     }
     else
